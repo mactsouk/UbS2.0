@@ -35,4 +35,5 @@ blocks:
           - sudo mount
           - df
           - echo $PATH
+          - free
 
