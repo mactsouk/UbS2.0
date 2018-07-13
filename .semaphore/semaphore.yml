@@ -17,7 +17,7 @@ blocks:
   - name: "Compiler versions"
     task:
       jobs:
-      - name: Smoke
+      - name: Compilers
         commands:
           - checkout
           - go version
@@ -28,7 +28,7 @@ blocks:
   - name: "System inspection"
     task:
       jobs:
-      - name: Smoke
+      - name: System Information
         commands:
           - sudo lsb_release -a
           - sudo mount
