@@ -6,58 +6,29 @@ agent:
     os_image: ubuntu1804
 
 blocks:
-  - name: "Build"
+  - name: "Installed packages"
     task:
-      env_vars:
-        - name: APP_ENV
-          value: prod
       jobs:
-      - name: Docker build
+      - name: List installed packages
         commands:
-          - checkout
-          - ls -1
-          - echo $APP_ENV
-          - echo "Docker build..."
-          - echo "done"
+          - sudo apt list --installed
+          - uname -a
 
-  - name: "Smoke tests"
+  - name: "Compiler versions"
     task:
       jobs:
       - name: Smoke
         commands:
           - checkout
-          - echo "make smoke"
+          - go version
 
-  - name: "Unit tests"
+  - name: "System inspection"
     task:
       jobs:
-      - name: RSpec
+      - name: Smoke
         commands:
-          - checkout
-          - echo "make rspec"
+          - sudo lsb_release -a
+          - sudo mount
+          - df
+          - echo $PATH
 
-      - name: Lint code
-        commands:
-          - checkout
-          - echo "make lint"
-
-      - name: Check security
-        commands:
-          - checkout
-          - echo "make security"
-
-  - name: "Integration tests"
-    task:
-      jobs:
-      - name: Cucumber
-        commands:
-          - checkout
-          - echo "make cucumber"
-
-  - name: "Push Image"
-    task:
-      jobs:
-      - name: Push
-        commands:
-          - checkout
-          - echo "make docker.push"
