@@ -33,6 +33,7 @@ blocks:
         commands:
           - sudo lsb_release -a
           - sudo mount
+          - sudo mount | grep -v cgroup
           - df
           - echo $PATH
           - free
