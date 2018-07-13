@@ -21,6 +21,7 @@ blocks:
         commands:
           - checkout
           - go version
+          - echo $GOPATH
           - gcc -v
           - g++ -v
           - perl -v
