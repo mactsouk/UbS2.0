@@ -6,13 +6,13 @@ agent:
     os_image: ubuntu1804
 
 blocks:
-  - name: "Installed packages"
+  - name: "List installed packages"
     task:
       jobs:
       - name: List installed packages
         commands:
-          - sudo apt list --installed
           - uname -a
+          - sudo apt list --installed
 
   - name: "Compiler versions"
     task:
