@@ -21,6 +21,9 @@ blocks:
         commands:
           - checkout
           - go version
+          - gcc -v
+          - g++ -v
+          - perl -v
 
   - name: "System inspection"
     task:
