@@ -39,3 +39,10 @@ blocks:
           - echo $PATH
           - free
 
+  - name: "Hugo"
+    task:
+      jobs:
+      - name: Installing hugo
+        commands:
+          - sudo apt -y install hugo
+
