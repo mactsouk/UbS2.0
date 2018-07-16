@@ -13,6 +13,7 @@ blocks:
         commands:
           - uname -a
           - sudo apt list --installed
+          - sudo apt search hugo
 
   - name: "Compiler versions"
     task:
