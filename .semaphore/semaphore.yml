@@ -38,6 +38,7 @@ blocks:
           - df
           - echo $PATH
           - free
+          - git --version
 
   - name: "Hugo"
     task:
