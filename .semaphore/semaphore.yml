@@ -45,4 +45,5 @@ blocks:
       - name: Installing hugo
         commands:
           - sudo apt -y install hugo
+          - hugo version
 
