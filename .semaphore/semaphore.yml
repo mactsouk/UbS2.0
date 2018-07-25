@@ -45,8 +45,8 @@ blocks:
       jobs:
       - name: Installing hugo
         commands:
-          - sudo apt get update
-          - sudo apt -y get upgrade
+          - sudo apt-get update
+          - sudo apt-get -y upgrade
           - sudo apt -y install hugo
           - hugo version
 
