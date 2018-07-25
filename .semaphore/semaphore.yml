@@ -1,5 +1,5 @@
 version: "v1.0"
-name: First pipeline example
+name: Using ubuntu1804 os_image
 agent:
   machine:
     type: e1-standard-2
